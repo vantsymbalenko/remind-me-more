@@ -5,21 +5,20 @@ import ComponentClock from '../components/Clock';
 
 class Clock extends Component{
 	componentDidMount(){
-		// this.timeID = setInterval(this.props.update, 1000);
+		this.timeID = setInterval(this.props.update, 1000);
 	}
 	componentWillUnmount(){
 		clearInterval(this.timeID);
 	}
 	render(){
-		console.log(this.props);
 		return(
-			<ComponentClock time = {this.props.nowTime.toString()}/>
+			<ComponentClock time = {this.props.nowTime}/>
 		)
 	}
 }
 
 const mapStateToProps = (state) => ({
-	nowTime : state.clock
+	nowTime : state.clock.date
 });
 
 const mapDispatchToProps = {

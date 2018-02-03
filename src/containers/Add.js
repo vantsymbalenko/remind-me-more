@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import AddForm from './AddForm';
 import {connect} from 'react-redux';
 import setAddAccess from '../actions/setAddAccess';
+import clearErrors from '../actions/clearErrors';
 import ComponentAdd from '../components/Add';
 
 class Add extends Component{
 	render(){
 		return(
 			<div className ="add">
-				{!this.props.add ? <ComponentAdd setAccess = {this.props.setAccess}/> : <AddForm />}
+				{!this.props.add ? <ComponentAdd setAccess = {this.props.setAccess}/> : <AddForm  clearErrors = {this.props.clearErrors}/>}
 			</div>
 		);
 	}
@@ -18,7 +19,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-	setAccess : setAddAccess
+	setAccess : setAddAccess,
+	clearErrors : clearErrors
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Add)

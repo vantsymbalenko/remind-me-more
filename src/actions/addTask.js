@@ -1,8 +1,19 @@
+let datePattern = /^[0-9]{2}:[0-9]{2}$/;
 export default function add(time, task, id){
-	if(!task || !time){
+	if(!datePattern.test(time)){
 		return {
 			type: "SET_ERROR",
-			payload: "Error, invalid data"
+			payload: {
+				time : "Time is invalid"
+			}
+		}
+	}
+	if(!task.length){
+		return{
+			type: "SET_ERROR",
+			payload: {
+				task :"Task field is empty"
+			}
 		}
 	}
 	return{
