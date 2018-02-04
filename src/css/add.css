@@ -1,0 +1,55 @@
+.add{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+ 	background: rgba(169, 135, 100, 0.5);
+	border-top: 1px solid #dcd7d5;
+	/*margin-top:13px;*/
+}
+
+.add > .add-button > button{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: none;
+	line-height: 24px;
+	font-size:28px;
+	color: #744f41;
+	transition: 375ms
+}
+.add > .add-button > button:hover{
+	background: #e6d04e;
+	color: #ffffff;
+}
+.add > .add-form input, textarea{
+	width: 80%;
+	border:none;
+	padding: 10px;
+	margin: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	border-radius: 2px;
+}
+.add > .add-form input{
+	text-align: center;
+	color: gray;
+	background: lightgray;
+}
+
+.add > .add-form button {
+	width:85%;
+	padding: 5px;
+	border: none;
+	color: white;
+	font-size: 20px;
+	background: green;
+	border-radius: 3px;
+	transition: 375ms;
+}
+.add > .add-form > button:hover{
+	color: green;
+	border: 1px solid green;
+	background: #ffffff;
+}

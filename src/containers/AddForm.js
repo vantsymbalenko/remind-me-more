@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import addTask from '../actions/addTask';
 import ComponentAddForm from '../components/AddForm';
+import addTask from '../actions/addTask';
 
 class AddForm extends Component{
-	componentWillMount  (){
+	componentWillMount(){
 		this.props.clearErrors();
 	}
 	render(){

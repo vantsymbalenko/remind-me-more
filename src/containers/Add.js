@@ -1,15 +1,21 @@
 import React, {Component} from 'react';
-import AddForm from './AddForm';
 import {connect} from 'react-redux';
+
+import AddForm from './AddForm';
+import ComponentAdd from '../components/Add';
+
 import setAddAccess from '../actions/setAddAccess';
 import clearErrors from '../actions/clearErrors';
-import ComponentAdd from '../components/Add';
+
+import '../css/add.css';
 
 class Add extends Component{
 	render(){
 		return(
 			<div className ="add">
-				{!this.props.add ? <ComponentAdd setAccess = {this.props.setAccess}/> : <AddForm  clearErrors = {this.props.clearErrors}/>}
+				{!this.props.add ? 
+					<ComponentAdd setAccess = {this.props.setAccess}/> : 
+					<AddForm  clearErrors = {this.props.clearErrors}/>}
 			</div>
 		);
 	}

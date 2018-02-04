@@ -9,5 +9,6 @@ let store = configStore();
 ReactDOM.render(
 	<Provider store = {store}>
 		<App />
-	</Provider>
-	, document.getElementById('root'));
+	</Provider>,
+	 document.getElementById('root')
+);

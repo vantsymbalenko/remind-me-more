@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100vh;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: auto;
+	justify-content: center;
+	width: 98%;
+	height: 95vh;
+}
+
+.wrapper{
+    width: 356px;
+    height: 322px;
+	border-radius: 2px;
+}
+@media screen and (min-height: 552px){
+	body{
+		background-size: 100% 150%;
+	}
+	.container{
+		align-content: center;
+	}
+	
+}
+@media screen and (max-height: 552px){
+	body{
+		background-size: 100% 150%;
+	}
+}
+
+@media screen and (max-width: 354px){
+	.wrapper{
+		width: 100%;
+		min-width:295px;
+	}
+}
+
+

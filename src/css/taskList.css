@@ -1,0 +1,59 @@
+
+ul{
+	max-height: 123px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+}
+ul::-webkit-scrollbar {
+	display: none;
+}
+.task-list > ul > li{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    background: rgba(169, 135, 100, 0.5);
+    list-style: none;
+    width: 93%;
+    font-size: 12px;
+    color: #ffffff;
+   	padding-top: 15px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.task-list > ul > li:hover{
+	opacity: 1;
+	background: #e6d04e;
+	color: #a98764;
+	cursor: pointer;
+}
+
+.task-list > ul > li > span > button {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: none;
+	margin-top: -5px;
+	background: none;
+	opacity: 0;
+}
+.task-list > ul > li > span > button > svg{
+	width: 24px;
+	height: 24px;
+	fill: #a98764;
+	transition: 375ms;
+}
+.task-list > ul > li > span > button:hover > svg{
+	cursor: pointer;
+	fill: #ffffff;
+}
+
+
+.task-list > ul > li:hover > span > button{
+	opacity: 1;
+}

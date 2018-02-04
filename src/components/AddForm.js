@@ -33,7 +33,7 @@ export default  class AddForm extends Component{
 
 	render(){
 		return(
-			<div className ="add">
+			<div className ="add-form">
 				<input 
 					type="text" 
 					placeholder = "Task time" 
@@ -41,13 +41,13 @@ export default  class AddForm extends Component{
 					onChange = {this.time}
 				/>
 				<div>{this.props.errors.time || null}</div>
-				<input 
+				<textarea 
 					type = "text" 
 					placeholder ="Your plan" 
 					ref = {(input) => {this.task = input;}}
 				/>
 				<div>{this.props.errors.task || null}</div>
-				<button onClick={this.add}>add</button>
+				<button onClick={this.add}>Add</button>
 			</div>
 		);
 	}

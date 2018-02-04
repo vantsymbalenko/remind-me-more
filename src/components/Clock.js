@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import '../css/clock.css';
 
 export default class Clock extends Component{
-	
 	render(){
 		return(
-			<div>{this.props.time}</div>
+			<div className="clock">
+				<div className="layer"></div>
+				{this.props.time}
+			</div>
 		)
 	}
 }

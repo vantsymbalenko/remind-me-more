@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import update from '../actions/updateClock';
 import ComponentClock from '../components/Clock';
+import update from '../actions/updateClock';
+
 
 class Clock extends Component{
 	componentDidMount(){
